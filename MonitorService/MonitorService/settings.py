@@ -59,13 +59,22 @@ WSGI_APPLICATION = 'MonitorService.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'monitorService',
+        'USER': 'root',
+        'PASSWORD': 'tsinghua',
+        'HOST': '166.111.143.241',
+        #django admin login: admin tsinghua
     }
 }
-
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
